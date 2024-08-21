@@ -108,7 +108,16 @@ body {
     transition-delay: .6s;
 }
 
+.weather-box .box .info-weather {
+    transform: translateY(-120%);
+}
 
+.container.active .weather-box .box .info-weather,
+.container.active .weather-details .humidity .info-humidity,
+.container.active .weather-details .wind .info-wind {
+    transform: translateY(0%);
+    transition: translate 1s ease;
+}
 
 .weather-box img {
     width: 60%;
@@ -158,6 +167,12 @@ body {
     transition-delay: 1.2s;
 }
 
+.weather-details .humidity .info-humidity,
+.weather-details .wind .info-wind {
+    transform: translateY(-100%);
+    overflow: hidden;
+}
+
 .weather-details .humidity {
     padding-left: 20px;
     justify-content: flex-start;
@@ -201,4 +216,8 @@ body {
     font-size: 22px;
     font-weight: 500;
     margin-top: 12px;
+}
+
+.city-hide {
+    display: none;
 }
